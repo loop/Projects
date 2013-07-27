@@ -12,5 +12,23 @@ def pi(limit)
   puts pi[0,newlimit]
 end
 
-puts "Enter the number of digits of PI you want to be shown.\n"
-pi(gets.chomp)
+def is_numeric?(s)
+  begin
+    Float(s)
+  rescue
+    false # not numeric
+  else
+    true # numeric
+  end
+end
+
+
+valid = false
+while valid == false do
+  puts "Enter the number of digits of PI you want to be shown.\n"
+  input = gets.chomp
+  if is_numeric?(input) == true
+    valid = true
+    pi(input)
+  end
+end
