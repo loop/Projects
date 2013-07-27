@@ -12,6 +12,9 @@ def pi(limit)
   puts pi[0,newlimit]
 end
 
+# Checks if a string is a number.
+# Params:
+# +s+:: string to check
 def is_numeric?(s)
   begin
     Float(s)
